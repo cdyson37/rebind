@@ -1,7 +1,7 @@
 Rebind
 ======
 
-Rebind is a C++ library for manipulating containers of types, rather like `boost::mpl`. Unlike traditional meta-programming libraries, it aims to be agnostic about type containers. Rather than have an equivalent of `boost::mpl::vector`, it instead allows any template to act as a container of zero or more types. It aims to be template container agnostic in the same way that the STL is value container agnostic.
+Rebind is a C++ library for manipulating containers of types, rather like `boost::mpl`. It requires C++11 support. Unlike traditional meta-programming libraries, it aims to be agnostic about type containers. Rather than have an equivalent of `boost::mpl::vector`, it instead allows any template to act as a container of zero or more types. It aims to be template container agnostic in the same way that the STL is value container agnostic.
 
 In rebind, you can store types in any class you want e.g. `std::tuple` or an empty struct:
 
@@ -64,7 +64,7 @@ See `examples/reverse_string` for a party-trick example of string reversal at co
 Building
 --------
 
-Rebind is header-only. Tests and examples can be built by running `./build.sh`.
+Rebind is header-only. Tests and examples can be built by running `./build.sh`, which currently requires CMake. This may change to SCons or another build system at some point to eliminate this dependency (contributions welcome!)
 
 Reference
 ---------
