@@ -10,7 +10,7 @@ template <typename... Args>
 struct Container { };
 ```
 
-`rebind` itself is a takes the template arguments from one instantiation and applies them to a different template - for example:
+`Rebind` itself is a takes the template arguments from one instantiation and applies them to a different template - for example:
 
 ```cpp
 #include "rebind.h"
@@ -98,7 +98,7 @@ Contains<A<T...>, U> -> std::true_type or std::false_type depending on whether U
 
 Repeat<N, A<T...>, O> -> A<U...> // where U = O<O<O<T...>>> (N types)
 
-DropFirst<A<T, U...>> -> T<U...>
+DropFirst<A<T, U...>> -> A<U...>
 
 DropLast<A<T..., U>> -> A<T...>
 
